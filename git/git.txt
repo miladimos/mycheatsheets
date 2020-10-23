@@ -1,0 +1,14 @@
+// git config
+git config --global --edit
+
+git config --global --add user.name "test name"
+
+git config --global --unset user.name 
+
+git config --global --unset-all user.name
+
+git config --global --list
+
+
+ 
+ 
