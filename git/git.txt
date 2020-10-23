@@ -11,4 +11,22 @@ git config --global --list
 
 
  
+git rm --cached file // remove newfile added from stage
+
+git checkout file // move to before state
+
+git reset HEAD file // unstage file chnages
+
+git diff
+git diff --stat
+
+
+git reset --soft id
+
+git reset --mixed id
+
+git reset --hard id
+
+
+
  
