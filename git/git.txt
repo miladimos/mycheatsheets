@@ -27,6 +27,12 @@ git reset --mixed id
 
 git reset --hard id
 
+git checkout id
+
+git checkout master
+
+
+
 
 
  
