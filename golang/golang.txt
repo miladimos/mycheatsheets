@@ -1,0 +1,8 @@
+// varables
+
+var i int
+
+
+
+
+ 
