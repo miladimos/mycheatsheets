@@ -56,3 +56,22 @@ function func () {
     __TRAIT__ : The currnet Trait
 
 */
+echo '<pre>';
+print_r($_GET);
+print_r($_POST);
+print_r($_REQUEST);
+echo '</pre>';
+
+echo 'Hello '. $_GET['name'] ;
+
+
+$text = 'i Like Php';
+$encoded = urlencode($text);
+$decoded = urldecode($text);
+
+$tag = '<a href="#"> Link </a>';
+$a = htmlentities($text);
+$b = html_entity_decode($a);
+
+$c = htmlspecialchars($tag);
+$d = htmlspecialchars_decode($c);
