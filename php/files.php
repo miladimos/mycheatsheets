@@ -170,13 +170,29 @@
 
 ///////////////////////// Write File
 
-$file = __DIR__ . '\\' . 'file.txt';
-$handle = fopen($file, 'w');
-if($handle === false) die("Thi file cannot be openned.");
+// $file = __DIR__ . '\\' . 'file.txt';
+// $handle = fopen($file, 'w');
+// if($handle === false) die("Thi file cannot be openned.");
 
-$data = 'this new data';
-fwrite($handle, $data);
-fputs($handle, 'f');
+// $data = 'this new data';
+// fwrite($handle, $data);
+// fputs($handle, 'f');
 
-fclose($handle);
+// fclose($handle);
 
+
+//////////////// Temp File
+
+// echo 'Temp Dir: '. sys_get_temp_dir() . '<br >';
+
+// $handle = tmpfile();
+// fwrite($handle, "Write Test");
+// fseek($handle, 0);
+// echo fread($handle, 1024);
+// fclose($handle);
+
+$dir = sys_get_temp_dir();
+$filename = tempnam($dir, 'px-');
+$filename2 =$dir . DIRECTORY_SEPARATOR .  uniqid("TestPrefix-") . '.tmp';
+
+echo $filename;
