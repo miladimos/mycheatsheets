@@ -95,5 +95,8 @@
 
 // copy('x.txt', 'x.txt.bak');
 // rename('oldname','newname');
+// unlink('path');
 
-
+// chmod(); // Change Modification
+// chown(); // Change Owner
+// chgrp(); // Change Group
