@@ -97,6 +97,8 @@
 // rename('oldname','newname');
 // unlink('path');
 
-// chmod(); // Change Modification
+// chmod(path, code); // Change Modification
 // chown(); // Change Owner
 // chgrp(); // Change Group
+
+// echo filegroup('file');
