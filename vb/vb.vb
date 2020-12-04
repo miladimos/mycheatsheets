@@ -1,0 +1,2 @@
+Dim intVal As Integer;
+
