@@ -10,6 +10,7 @@ error_reporting(0); // Turn off all error reporting
 error_reporting(E_ERROR | E_WARNING | E_PARSE);
 
 error_reporting(E_ALL & ~E_NOTICE);
+error_reporting(E_ALL ^ E_NOTICE);
 
 error_reporting(-1); // E_ALL
 
