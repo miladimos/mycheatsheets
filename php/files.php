@@ -102,3 +102,81 @@
 // chgrp(); // Change Group
 
 // echo filegroup('file');
+
+
+// $lines = file('https://google.com/');
+// foreach($lines as $line) {
+//     echo $line;
+// }
+
+
+// $file = __DIR__ . '\\' . 'file.txt';
+// // $lines = file($file);
+// // foreach($lines as $line) {
+// //     echo $line . '<br >';
+// // }
+
+// $content = file_get_contents($file);
+// var_dump($content);
+
+// file_put_contents($file, '\r\nThis Thirth Line', FILE_APPEND);
+
+
+
+
+// $data = ['abc', 12, 'this is test'];
+// file_put_contents($file, serialize($data));
+
+// $d = unserialize(file_get_contents($file));
+
+// json_encode();
+// json_decode();
+
+
+///////////////
+// $file = __DIR__ . '\\' . 'file.txt';
+// $handle = fopen($file, 'r');
+// if($handle === false) die("Thi file cannot be openned.");
+// $data = fread($handle, 6);
+// echo $data;
+
+// $line = fgets($handle);
+// echo $line;
+
+
+// while(true) {
+//     $line = fgets($handle);
+//     if( $line === false) break;
+//     echo $line;
+// }
+
+
+// while(($line = fgets($handle)) !== false) {
+//     if( $line === false) break;
+//     echo $line;
+// }
+
+// header('Content-Type: text/txt');
+// while(!feof($handle)) {
+//     $line = fgets($handle);
+//     $line = str_replace(['\r', '\n'], '', $line);
+//     echo $line;
+// }
+
+// fclose($handle);
+
+
+
+
+///////////////////////// Write File
+
+$file = __DIR__ . '\\' . 'file.txt';
+$handle = fopen($file, 'w');
+if($handle === false) die("Thi file cannot be openned.");
+
+$data = 'this new data';
+fwrite($handle, $data);
+fputs($handle, 'f');
+
+fclose($handle);
+
