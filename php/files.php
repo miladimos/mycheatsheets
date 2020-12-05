@@ -36,6 +36,7 @@
 // is_readable();
 // is_writeable();
 
+// touch('dir/text.txt');
 
 // $path = __DIR__ . DIRECTORY_SEPARATOR;
 // $newDir = $path . 'newdir/2/images';
@@ -96,6 +97,11 @@
 // copy('x.txt', 'x.txt.bak');
 // rename('oldname','newname');
 // unlink('path');
+// rmdir('dir');
+// echo getcwd();
+// fseek($handle, $offset, $flag); // SEEK_SET | SEEK_CUR | SEEK_END
+// ftell($handle);
+// rewind($handle);
 
 // chmod(path, code); // Change Modification
 // chown(); // Change Owner
@@ -191,8 +197,38 @@
 // echo fread($handle, 1024);
 // fclose($handle);
 
-$dir = sys_get_temp_dir();
-$filename = tempnam($dir, 'px-');
-$filename2 =$dir . DIRECTORY_SEPARATOR .  uniqid("TestPrefix-") . '.tmp';
+// $dir = sys_get_temp_dir();
+// $filename = tempnam($dir, 'px-');
+// $filename2 =$dir . DIRECTORY_SEPARATOR .  uniqid("TestPrefix-") . '.tmp';
 
-echo $filename;
+// echo $filename;
+
+
+////////////////////////// CSV
+
+// $handle = fopen('test.csv', 'w');
+
+// $arrValues = array(
+//     'name,age,email',
+//     'milad,19,milad@gmail.com',
+//     'ali,14,ali@gmail.com',
+//     'amir,24,amir@gmail.com',
+//     'mani,17,mani@gmail.com',
+// );
+// foreach($arrValues as $line) {
+//     fputcsv($handle, explode(',', $line));
+// }
+
+// fclose($handle);
+ 
+////////
+
+// $handle = fopen('test.csv', 'r');
+
+// while($line = fgetcsv($handle, 0, ',')) {
+
+// }
+// fclose($handle);
+
+
+
