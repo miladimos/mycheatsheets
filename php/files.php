@@ -232,3 +232,17 @@
 
 
 
+// $file_name_csv = "myscvfile.csv";
+// $fp = fopen($file_name_csv, 'w');
+ 
+// fprintf($fp, chr(0xEF).chr(0xBB).chr(0xBF));
+// fputcsv($fp, array("firstName", "lastName"));
+ 
+// fprintf($fp, chr(0xEF).chr(0xBB).chr(0xBF));
+// fputcsv($fp, array("Amir", "Shokri"));
+ 
+// fprintf($fp, chr(0xEF).chr(0xBB).chr(0xBF));
+// fputcsv($fp, array("John", "Due"));
+ 
+// fclose($fp);
+
