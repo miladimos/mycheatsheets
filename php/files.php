@@ -223,7 +223,7 @@
  
 ////////
 
-// $handle = fopen('test.csv', 'r');
+// $handle = fopen('test.csv', 'r') or die("Failed to create file");
 
 // while($line = fgetcsv($handle, 0, ',')) {
 

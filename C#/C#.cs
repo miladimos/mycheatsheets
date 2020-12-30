@@ -1,3 +1,13 @@
-using System.Console;
+using System;
 
-// Console.WriteLine("Hello World");
+namespace AppLearn
+{
+    public class CSharp
+    {
+        public static void main()
+        {
+            // Console.WriteLine("Hello World");
+            Console.Readkey();
+        }
+    }
+}
