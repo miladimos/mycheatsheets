@@ -37,4 +37,16 @@
 ////////////// Jalali Date/Time
 
 
+$timezone_identifiers = DateTimeZone::listIdentifiers();
 
+foreach($timezone_identifiers as $key => $list){
+
+echo $list . "<br/>";
+
+}
+
+date_default_timezone_set ( string $timezone_identifier );
+echo "The time in " . date_default_timezone_get() . " is " . date("H:i:s");
+
+date_default_timezone_set("Asia/Calcutta");
+echo "The time in " . date_default_timezone_get() . " is " . date("H:i:s");
