@@ -24,8 +24,6 @@ driver.get(url)
 
 # driver.find_element_by_xpath("").click()
 
-# driver.execute_script('window.scrollTo(0,500)')
-
 # findedElements = driver.fine_elements(By.CLASS_NAME, 'className')
  
 #  byIdFinded = driver.find_element(By.ID, 'idTest')
@@ -70,5 +68,10 @@ driver.get(url)
 
 
 # Tables 
+# rows = driver.find_element(By.XPATH, "tr")
 
-rows = driver.find_element(By.XPATH, "td")
+# Scroll
+
+# driver.execute_script('window.scrollTo(0,500)')
+el = driver.find_element(By.ID, 'd')
+driver.execute_script("arguments[0].scrollIntoView();",el)
