@@ -58,3 +58,17 @@ driver.get(url)
 
 # driver.switch_to.frame("Two")
 # driver.switch_to.default_content()
+
+
+# Handle
+
+# handles = driver.window_handles # list of opend pages with unique id
+
+# for window in handles:
+#     driver.switch_to.window(window)
+#     print(window.title)
+
+
+# Tables 
+
+rows = driver.find_element(By.XPATH, "td")
