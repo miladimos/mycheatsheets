@@ -2,6 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select
+from selenium.webdriver import Actionchains
 
 import time
 
@@ -9,6 +10,8 @@ url = 'http://google.com'
 
 options = webdriver.ChromeOptions()
 options.add_argument("--disable-notifications")
+options.add_argument("--disable-extentions")
+options.add_argument("disable-infobars")
 prefs = {"profile.default_content_setting_values.geolocation":2}
 options.add_experimental_option("prefs", prefs)
 
@@ -73,5 +76,20 @@ driver.get(url)
 # Scroll
 
 # driver.execute_script('window.scrollTo(0,500)')
-el = driver.find_element(By.ID, 'd')
-driver.execute_script("arguments[0].scrollIntoView();",el)
+# el = driver.find_element(By.ID, 'd')
+# driver.execute_script("arguments[0].scrollIntoView();",el)
+
+
+# Action Chains 
+
+# el = driver.find_element(By.XPATH, '')
+# action = Actionchains(driver) 
+# action.move_to_element(el).move_to_element(el2).click().perform() 
+
+# action.context_click(el).perform()
+# driver.find_element(By.XPATH, '').send_keys('fsdf')
+# action.double_click(el).perform()
+# action.drag_and_drop(start, end).perform()
+
+
+# Upload File
