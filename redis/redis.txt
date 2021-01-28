@@ -1,4 +1,8 @@
-set name milad
+ping 
+
+set name ali
+
+set fullname "jon due"
 
 keys *
 
@@ -11,6 +15,10 @@ dump name
 exists name
 
 expire name 10 // second
+
+set name ali EX 60
+setex name 60 ali
+
 pexpire name 10 // milisecond
 expireat name 10 // milisecond-timestamp
 
@@ -25,3 +33,50 @@ randomkey
 
 rename oldkey newkeyname
 
+getrange name 0 5
+getrange name 0 -1
+
+getset name ali
+
+mget key1 key2
+
+mset name ali family aad
+msetnx name ali family aad
+
+setnx name ali
+
+setrange name offset value
+
+strlen name
+
+psetex key milisecond value
+
+incr visit
+incrby visit 2
+
+decr visit
+decrby visit 2
+
+append key value
+
+
+hset key field value
+hget key field
+
+hgetall key
+
+hkeys key
+hvals key
+hlen key
+
+hdel key value
+
+hexists key field
+
+hincrby key field 1
+
+hincrbyfloat key field 1.3
+
+hmget key field 
+
+hmset key field value
