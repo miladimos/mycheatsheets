@@ -1,0 +1,27 @@
+set name milad
+
+keys *
+
+get name
+
+del name
+
+dump name
+
+exists name
+
+expire name 10 // second
+pexpire name 10 // milisecond
+expireat name 10 // milisecond-timestamp
+
+
+
+ttl name // second
+pttl name // milisecond
+
+persist name 
+
+randomkey
+
+rename oldkey newkeyname
+
