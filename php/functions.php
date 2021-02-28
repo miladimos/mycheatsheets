@@ -11,7 +11,7 @@ function add(int $arg) :  int {
 }
 
 
-function sum($name, ...$nums) {
+function sum($name = 'default', ...$nums) {
     $sum = 0;
     foreach($nums as $num) {
         $sum += $num;
@@ -23,9 +23,53 @@ function sum($name, ...$nums) {
 echo sum('name',1,4,1,6,8,9,2,14);
 
 
+// argument by refrences
+function doubler(&$value){
+    $value *= 2;
+}
+
 $mul = function ($a, $b) {
     return $a + $b;
 };
+
+// global varable in function
+// $counter = 1;
+// updateCounter();
+// function updateCounter(){
+//     global $counter;
+//     $counter++;
+// }
+echo $counter;
+
+// static variables
+$counter = 10;
+updateCounter();
+updateCounter();
+function updateCounter(){
+    static $counter = 0;
+    $counter++;
+    echo $counter; //1 ... 2
+}
+echo $counter; // 10
+
+
+
+
+// php builtin functions for information of functions
+func_get_args();
+func_num_args();
+$value = func_get_arg($argNumber);
+
+function mean(){
+    $sum = 0;
+    $size = func_num_args();
+    for($i=0; $i < $size; $i++) {
+        $sum += func_get_arg($i);
+    }
+    $average = $sum / $size;
+    return $average;
+}
+
 
 class strongPassword
  {
@@ -71,5 +115,3 @@ class strongPassword
  echo "<strong>&dollar;strongPassword->randomText(30, 2) : </strong><br />" . $strongPassword->randomText(30, 2) . "<br /><br />";
  echo "<strong>&dollar;strongPassword->randomText(40, 3) : </strong><br />" . $strongPassword->randomText(40, 3) . "<br /><br />";
  echo "<strong>&dollar;strongPassword->randomText(50, 4) : </strong><br />" . $strongPassword->randomText(50, 4) . "<br /><br />";
- 
-?>

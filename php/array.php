@@ -8,6 +8,7 @@ $b1 = array(1, 2, 3);
 
 $c1 = [1, 'str', true, 3.14];
 
+$days = [1=>"mon", "tue", 'wend', 'thu', 'fri', 'sat'];
 
 ////////
 $a = [
@@ -46,6 +47,12 @@ $colors = ['red', 'blue', 'orange', 'pink', 'black', 'blue', 'red'];
 
 echo count($nums);
 
+echo sizeof($nums);
+
+array_slice($colors, 1, 4);
+
+list($red, $blue) = array_slice($color, 0,2);
+
 echo array_sum($nums);
 
 echo array_keys($nn);
@@ -61,6 +68,12 @@ echo array_search('green', $colors); // false
 
 echo array_unique($colors);
 
+
+$callback = function($value, $key) {
+    print("<tr><td>{$value}</td><td>{$value}</td></tr>\n");
+};
+$person = ['name'=>'milad', 'age'=>20];
+array_walk($person, $callback);
 
 
 // Array Sort Functions
@@ -93,6 +106,7 @@ echo next($arr);
 echo current($arr);
 
 end($arr);
+
 key($arr);
 
 echo prev($arr);
@@ -110,4 +124,10 @@ while(current($arr) !== false) {
 
 list($key, $value) = each($arr);
 
+
+// range
+
+$numbers = range(1,9);
+$letters = range('a', 'z');
+$revNumbers = range(9, 1);
 

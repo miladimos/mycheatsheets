@@ -1,10 +1,14 @@
 <?php
 
-$str = "Hello World! Test";
+$strSingleQuotation = 'Hello World'; // can use just \' or \\   - 
+$strDoubleQuotation = "Hello World"; // can use all scape chars - can use variables 
+
+$testVar = 15;
+$str = "Hello World! {$testVar}";
 
 // echo $str[1] . '<br >'; // e
 
-// echo strlen($str). '<br >';
+// echo strlen($str) . '<br >';
 
 $strArr = str_split($str, 2);
 // echo '<pre>';
@@ -12,14 +16,15 @@ $strArr = str_split($str, 2);
 // echo '</pre>';
 
 $hereDoc = <<<HEREDOC
-    This is Test For \n
-    HEREDOc Format string \n
+    This is Test For 
+    For long strings 
+    HEREDOc Format string
     \$str = $str
 HEREDOC;
 
 $nullDoc = <<<'NULLDOC'
-    This is Test For \n
-    HEREDOc Format string \n
+    This is Test For
+    HEREDOc Format string
     \$str = $str
 NULLDOC;
 

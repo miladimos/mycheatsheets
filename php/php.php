@@ -9,6 +9,11 @@ $str = 'This is String';
 $b   = true;
 $arr = [1,2,3,4];
 $n   = null;
+$hex = 0xC4A;
+$oct = 0744;
+
+$fe = 8.5e4;
+$fe2 = 1.5E+10;
 
 
 // Constants
@@ -33,7 +38,7 @@ const PI = 3.141516;
 $var = (string) 10; // Type Casting
 
 /* Type Check
-settype() - Set the type of a variable
+settype($var, 'type') - Set the type of a variable
 gettype() - Get the type of a variable
 get_class() - Returns the name of the class of an object
 is_array() - Finds whether a variable is an array
@@ -50,6 +55,12 @@ is_string() - Find whether the type of a variable is string
 function_exists() - Return TRUE if the given function has been defined
 method_exists() - Checks if the class method exists
 */
+
+print("Hello");
+
+print "Hello";
+
+echo "Hello", " World";
 
 $var = '10';
 echo ' $var = '           . $var;
