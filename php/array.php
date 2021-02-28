@@ -68,6 +68,26 @@ echo array_search('green', $colors); // false
 
 echo array_unique($colors);
 
+in_array("search", $array);
+in_array("50", $array, true);
+
+array_search("search", $array);
+
+array_reverse();
+
+array_merge();
+
+array_push();
+
+array_pop();
+
+array_diff();
+
+array_shift();
+
+array_sum();
+
+array_unique();
 
 $callback = function($value, $key) {
     print("<tr><td>{$value}</td><td>{$value}</td></tr>\n");
@@ -77,7 +97,8 @@ array_walk($person, $callback);
 
 
 // Array Sort Functions
-echo sort($colors);
+
+echo sort($colors); // first string next numbers 
 
 echo sort($nums);
 
@@ -90,6 +111,16 @@ echo arsort($nn);
 echo ksort($nn);
 
 echo krsort($nn);
+
+// usort($arr, function () {});
+
+// uasort();
+
+// uksort();
+
+natsort(); // netural sort
+
+natcasesort(); // scape alphabet
 
 $alphabet = 'abcdefghklmnopqrstu1234567890AVNDJSDFC';
 $arrayAlphabet = str_split($alphabet); // string to array
@@ -131,3 +162,21 @@ $numbers = range(1,9);
 $letters = range('a', 'z');
 $revNumbers = range(9, 1);
 
+
+$ages = [
+    'Person' => 'Age',
+    'Ali'    => 30,
+    'Amir'    => 20,
+    'Milad'    => 25,
+    'Arash'    => 19,
+    'Mehdi'    => 15,
+];
+
+reset($ages);
+list($person, $age) = each($ages);
+echo("<table>\n<tr><th>{$person}</th></tr></table>\n");
+
+while(list($person, $age) = each($age)) {
+    echo("<tr><td>{$person}</td><td>{$age}</td></tr>\n");
+}
+echo("</table>");
