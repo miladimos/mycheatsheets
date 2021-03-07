@@ -56,6 +56,8 @@ function_exists() - Return TRUE if the given function has been defined
 method_exists() - Checks if the class method exists
 */
 
+// shell_exec('dir'); or `dir`
+
 print("Hello");
 
 print "Hello";

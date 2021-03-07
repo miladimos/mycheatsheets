@@ -68,6 +68,7 @@
 // echo '<h3>Contents: </h3>';
 // $dir = dirname(dirname(__DIR__));
 // $handle = opendir($dir);
+// closedir($handle);
 
 // // echo $handle;
 // // var_dump($handle);
@@ -149,6 +150,15 @@
 // $line = fgets($handle);
 // echo $line;
 
+// fgetc();
+// fgetcsv();
+// fgets();
+
+// file(); // return array contains lines
+// FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES
+
+// $bytes = readfile();
+
 
 // while(true) {
 //     $line = fgets($handle);
@@ -203,6 +213,8 @@
 
 // echo $filename;
 
+
+// if allow_url_fopen in php.init in on can open remote files
 
 ////////////////////////// CSV
 

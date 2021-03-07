@@ -50,3 +50,33 @@ echo "The time in " . date_default_timezone_get() . " is " . date("H:i:s");
 
 date_default_timezone_set("Asia/Calcutta");
 echo "The time in " . date_default_timezone_get() . " is " . date("H:i:s");
+
+
+
+
+
+// echo time(); // timestamp
+// date("format", $timestamp);
+
+// mktime(1, 2, 3, 4, 5, 2006); // return timestamp
+
+// checkdate(10, 11, 10); 
+// checkdate(2, 29, 2014); //false
+
+getdate($timestamp);
+/**
+ * get a timestamp and return an asc array
+ * minutes , mdate, mon, ydate, month
+ */
+
+ fileatime();
+
+ filectime();
+
+ filemtime();
+
+ basename("path/to/file.txt"); // file.txt
+ basename("path/to/file.txt", '.txt'); // file
+
+//  dirname('path/to/file') // path/to
+
