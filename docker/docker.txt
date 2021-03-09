@@ -1,0 +1,28 @@
+docker run hello-world
+
+docker run --rm hello-world // remove automatic when stopped
+-it // interactive
+--name // set the custom name for image
+
+docker run -p6379:6379 redis
+
+docker pull image-name // get the image from hub
+
+docker images
+
+docker ps // list docker run
+
+docker ps -a
+
+docker rm containerID // remove docker stopped container
+
+docker container prune // remove all stopped containers
+
+docker rmi image // remove docker image
+
+docker exec containerID command
+
+docker exec -it image-name command
+
+
+docker run --name redis redis redis-server --appendonly yes
