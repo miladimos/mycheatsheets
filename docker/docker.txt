@@ -25,4 +25,4 @@ docker exec containerID command
 docker exec -it image-name command
 
 
-docker run --name redis redis redis-server --appendonly yes
+docker run --name redis  -p 6379:6379 --rm -v /tmp/data/redis:/data redis-server --appendonly yes
