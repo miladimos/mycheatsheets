@@ -1,0 +1,165 @@
+# Data Types
+
+-- Numeric --
+
+TINYINT:
+signed -> 128 to 127
+unsigned -> 0 to 255
+
+INT:
+signed ->  -(2^31) to 2^31
+unsigned ->  0 to 2^32
+
+BIGINT:
+signed -> -(2^64) to 2^63
+unsigned -> 0 to 2^64
+
+FLAOT 
+DOUBLE
+
+-- DATETIME --
+
+DATE: 
+1000-01-01 to 9999-12-31
+
+TIME: 
+00:00:00 to 23:59:59
+
+DATETIME:
+1000-01-01 00:00:00 to 9999-12-31 23:59:59
+
+TIMESTAMP:
+number in format -> YYYYMMDDHHMMSS
+
+
+-- STRINGS --
+
+CHAR(M):
+string with M chars (M < 256)
+
+VARCHAR(M):
+string with M chars (M < 65536)
+
+TEXT:
+string with max len 65535
+
+BLOB:
+LIKE TEXT but case sensitive
+
+MEDIUMTEXT:
+string with 16 mg
+
+MEDIUMBLOB:
+LIKE MEDIUMTEXT but case sensitive
+
+LONGTEXT:
+string with 4 g
+
+LONGBLOB:
+LIKE LONGTEXT but case sensitive
+
+ENUM
+
+
+//////////////////////////
+
+# Commands
+
+// all mysql commands finished by ;
+// database and table names in linux is sensitive
+
+show databases;
+
+create database database_name;
+
+use database_name;
+
+show tables;
+
+create table table_name (
+
+) ;
+
+INSERT INTO table_name ('Field1', 'Field2') 
+                VALUES ("Value1", "Value2");
+
+INSERT INTO table_name VALUES ('Value1', 'Value2');
+
+select * from table;
+
+select * from database.table;
+
+select * from tables limit 10;
+select * from tables limit 10, 30;
+
+select Coloumn1, Coloumn2, ... from database.table;
+
+select * from table_name where Coloumn < 200;
+select * from table_name where Coloumn < 200 order by ASC; // DESC
+
+select * from table_name order by Coloumn1 ASC, Coloumn2 DESC;
+
+select * from table_name where Coloumn1 between 100 and 200;
+
+select * from table_name where Coloumn1 > 100 and Coloumn2 in ("a", "b", "c");
+
+select * from table_name where Coloumn1 is null;
+
+select * from table_name where Coloumn1 is not null;
+
+select * from table_name where Coloumn1 like '%t%';
+
+select distinct Coloumn1 from table_name;
+
+select Coloumn1 as C1, Coloumn2 as C2 from table_name;
+
+select 10 + 5; // - * 
+
+select Coloumn1, Coloumn2 + 10 as C2 from table_name;
+
+select @var := Coloumn1 from table_name ;
+select * from table_name where Coloumn2 > @tp;
+
+
+
+// usefull functions
+
+select avg(Coloumn) as average from table_name;
+
+// sum(); - min() - max()
+
+select count(*) as records from table_name;
+
+select concat(fname, '', lname) as fullname from table_name;
+
+length() // string byte size
+char_length() // string length size
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
