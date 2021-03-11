@@ -130,18 +130,29 @@ select avg(Coloumn) as average from table_name;
 
 select count(*) as records from table_name;
 
-select concat(fname, '', lname) as fullname from table_name;
+select concat(fname, ' ', lname) as fullname from table_name;
 
 length() // string byte size
 char_length() // string length size
 
 
+left(Coloumn, 10); - right(Coloumn, 4); // return n chars
+
+trim(); - rtrim() - ltrim();
+
+substring(str, x, n); // start index is 1
+ 
+lower() upper()
 
 
+// Update
 
+update table_name set Coloumn = 'value';
 
+delete from table_name where Coloumn1 == 1;
 
-
+delete from table_name; // delete all records
+truncate table table_name; // delete table and create new empty table
 
 
 
