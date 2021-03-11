@@ -3,6 +3,13 @@
 // function_name('/pattern/',subject);
 
 
+// preg_match()    The preg_match() function searches string for pattern, returning true if pattern exists, and false otherwise.
+// preg_match_all()    The preg_match_all() function matches all occurrences of pattern in string. Useful for search and replace.
+// preg_replace()  The preg_replace() function operates just like ereg_replace(), except that regular expressions can be used in the pattern and replacement input parameters.
+// preg_split()    Preg Split (preg_split()) operates exactly like the split() function, except that regular expressions are accepted as input parameters.
+// preg_grep() The preg_grep() function searches all elements of input_array, returning all elements matching the regex pattern within a string.
+// preg_ quote()   Quote regular expression characters
+
 
 $my_url = "www.php.com";
 if (preg_match("/php/", $my_url))
