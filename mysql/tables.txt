@@ -1,0 +1,19 @@
+create table users(
+    id int primary key,
+    username varchar(30) unique not null,
+    age int,
+    check (age <= 8),
+    active bool default true
+);
+
+create table profile(
+    id int primary key,
+    user_id int,
+    bio varchar(255),
+    foreign key (user_id) references users(id)
+);
+
+
+
+
+

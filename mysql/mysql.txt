@@ -97,8 +97,6 @@ drop database if exists database_name;
 
 alter database database_name character set utf8 collate utf8_persian_ci;
 
-
-
 create table table_name (
     Field1 types,
     Field2 types,
@@ -126,6 +124,8 @@ create temporary table table_name(
 );
 
 drop temporary table table_name;
+
+
 
 
 INSERT INTO table_name ('Field1', 'Field2') 
@@ -196,6 +196,8 @@ lower() upper()
 // Update
 
 update table_name set Coloumn = 'value';
+
+update table_name set Coloumn = 'value' where Coloumn =1;
 
 delete from table_name where Coloumn1 == 1;
 
