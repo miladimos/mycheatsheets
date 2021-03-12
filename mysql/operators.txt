@@ -1,0 +1,22 @@
+select 10+4, 3*2, 4-1, 8/2, 16%3;
+
+update table_name set Column1= 2*2 where id=1;
+
+
+select 10 = 10, 5 <> 3, 1 < 2, 2 <= 3, 3 > 4, 4 >= 1, 4 != 4;
+
+select 5 between 1 and 10; // 1
+
+select ' ' is null; // 0
+select ' ' is not null; // 1
+
+select 'sql' like '%q%';
+select 'sql' like 'sq_';
+
+select 2 in (1,2,3,4,5);
+
+select 'mysql' regexp '^m*l$';
+
+
+
+

@@ -1,1 +1,15 @@
-regex
++ -> one or more 
+* -> zero or more
+? -> zero or one char
+. -> one char
+
+^ -> start char
+$ -> end char
+
+\s
+\S
+
+\d
+
+\w
+\W
