@@ -1,3 +1,20 @@
+# Engines 
+
+MyISAM:
+default engine in before mysql 5.5.5
+
+store every table data in three files:
+frm -> includes table schema
+myd -> includes data
+myi -> includes indexes
+
+
+Memory:
+Store data in memory
+
+
+
+
 # Data Types
 
 -- Numeric --
@@ -72,13 +89,44 @@ show databases;
 
 create database database_name;
 
+create database if not exists database_name;
+
 use database_name;
+
+drop database if exists database_name;
+
+alter database database_name character set utf8 collate utf8_persian_ci;
+
+
+
+create table table_name (
+    Field1 types,
+    Field2 types,
+) ;
 
 show tables;
 
-create table table_name (
+alter table table_name rename new_name;
 
-) ;
+alter table table_name add Coloumn type;
+
+alter table table_name drop coloumn Coloumn;
+
+alter table table_name modify Coloumn new_type;
+
+alter table table_name alter Coloumn1 set default 'Default value';
+
+drop table if exists table_name;
+
+describe table_name;
+
+create temporary table table_name(
+    Field1 types,
+    Field2 types,
+);
+
+drop temporary table table_name;
+
 
 INSERT INTO table_name ('Field1', 'Field2') 
                 VALUES ("Value1", "Value2");
