@@ -31,7 +31,9 @@ git checkout id
 
 git checkout master
 
+git push origin tagName
 
+git push origin --tags
 
 
 
