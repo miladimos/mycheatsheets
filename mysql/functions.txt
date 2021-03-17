@@ -38,6 +38,39 @@ select ascii('c'), bit_lenght("String"), char(97, 100, 65);
 
 select concat("Hello ", "World"), concat_ws('_', "Hello", "World");
 
+select char_length("string"), character_length("string");
+
+select compress("string"), insert("string", 1, 2, "c");
+
+select find_in_set('php', 'mysql,sqlite,java,php,python'); // 4
+
+select field('string','php', 'string', 'mysql'); // 2
+
+select instr('my favorite lang is php', 'php');
+
+select lcase('PHP STRING'),ucase('sfd'), lower('STRING'), upper('fsdf');
+
+select left('hello world',2), right('hello world',2);
+
+select length(), lpad('php', 10, 'J'), rpad('php', 10, 'J');
+
+select locate('he', 'hello'),locate('he', 'hello', 2);
+
+rtrim('  mysql'), ltrim('my '), trim('  jf ');
+
+repeat('-',10);
+
+replace('hello world', 'hello', 'hi');
+
+reverse('string');
+
+strcmp('string', 'string');
+
+substring('hello world', 3,4), mid('hello world', 3,4);
+
+
+# Date time
+
 
 
 
