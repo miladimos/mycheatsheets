@@ -1,0 +1,46 @@
+Math Functions:
+
+select abs(-5); // 5
+
+select sin(70), cos(80), tan(120),atan(60), atan(60, 80), asin(70), acos(150), cot(95);
+
+
+select hex(70), oct(20), bin(14);
+
+select degress(40); // digit in radian
+
+select radians(180), exp(6), floor(24), ln(4), log(4), log(4, 5), log2(10), log2(10, 30) ;
+
+select 20 div 5;
+
+select mod(30, 10), pi(), pow(10, 3), rand(), rand(10), round(4.8), sign(-1), sqrt(60), truncate(3.141516, 4);
+
+select greatest(1,4,5,6,12,41), least(2,14,5,13,5);
+
+
+
+Agregation Functions:
+
+select avg(Column) from table_name;
+select count(Column) from table_name;
+select min(Column) from table_name;
+select max(Column) from table_name;
+select sum(Column) from table_name;
+
+select std(Column) from table_name;
+select variance(Column) from table_name;
+
+
+
+Strings Functions:
+
+select ascii('c'), bit_lenght("String"), char(97, 100, 65);
+
+select concat("Hello ", "World"), concat_ws('_', "Hello", "World");
+
+
+
+
+
+
+
