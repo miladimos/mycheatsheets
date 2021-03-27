@@ -1,5 +1,13 @@
 docker run hello-world
 
+docker run hello-world command
+
+docker run -r image
+
+docker run -d image sleep 100
+
+docker run image:tag
+
 docker run --rm hello-world // remove automatic when stopped
 -it // interactive
 --name // set the custom name for image
@@ -14,15 +22,19 @@ docker ps // list docker run
 
 docker ps -a
 
+docker stop containerID
+
 docker rm containerID // remove docker stopped container
 
 docker container prune // remove all stopped containers
 
 docker rmi image // remove docker image
+// -f 
 
 docker exec containerID command
 
 docker exec -it image-name command
 
-
 docker run --name redis  -p 6379:6379 --rm -v /tmp/data/redis:/data redis-server --appendonly yes
+
+docker build -t imageName .
