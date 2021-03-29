@@ -1,6 +1,13 @@
 FROM alpine
 
-RUN apt-get update && apt-get install apache2 -y
+# this is comment
+LABEL tag="1.0.0"
+
+RUN apk update && apk upgrade && apk add bash
+
+RUN ["mkdir", "/test"]
+
+
 
 EXPOSE 80
 
