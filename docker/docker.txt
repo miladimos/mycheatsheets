@@ -28,6 +28,18 @@ docker stop containerID
 
 docker attach CONTAINER_ID
 
+docker container log
+
+docker image push
+
+docker image ls
+
+docker image history
+
+docker image inspect
+
+docker system prune
+
 docker rm containerID // remove docker stopped container
 
 docker container prune // remove all stopped containers
@@ -50,5 +62,9 @@ docker create -it ubuntu:xenial bash
 docker cp CONTAINER_ID:/test_file test_file
 docker cp test_file CONTAINER_ID:/test_file
 
+docker image ls
 
+docker image history image:tag
+
+docker image inspect image:tag
 
