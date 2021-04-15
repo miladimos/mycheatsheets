@@ -1,25 +1,26 @@
 docker run hello-world
-
 docker run hello-world command
-
 docker run -r image
-
 docker run -d image sleep 100
-
 docker run image:tag
 
 docker run --rm hello-world // remove automatic when stopped
--it // interactive
---name // set the custom name for image
+            -it // interactive
+            --name // set the custom name for image
+
+docker run --name redis  -p 6379:6379 --rm -v /tmp/data/redis:/data redis-server --appendonly yes
 
 docker run -p6379:6379 redis
+
+docker run 
+
+
 
 docker pull image-name // get the image from hub
 
 docker images
 
 docker ps // list docker run
-
 docker ps -a
 docker ps -l
 docker ps -q // just run id's
@@ -37,12 +38,10 @@ docker attach CONTAINER_ID
 
 docker container log
 
+docker image 
 docker image push
-
 docker image ls
-
 docker image history
-
 docker image inspect
 
 docker system prune
@@ -58,7 +57,6 @@ docker exec containerID command
 
 docker exec -it image-name command
 
-docker run --name redis  -p 6379:6379 --rm -v /tmp/data/redis:/data redis-server --appendonly yes
 
 docker build -t imageName .
 
@@ -76,3 +74,21 @@ docker image history image:tag
 docker image inspect image:tag
 
 docker info
+
+docker pause containerID
+docker unpause containerID
+
+docker save image > image.tar
+
+docker rm `docker images -a -q`
+
+
+docker volume create —-name my_volume
+docker volume ls
+docker volume inspect my_volume
+docker volume rm my_volume
+docker volume prun
+docker system prune
+
+docker container run --mount source=my_volume، target=/container/path/for/volume my_image
+                             type=bind, valoume, tmpfs
