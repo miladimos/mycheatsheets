@@ -1,0 +1,14 @@
+create index usr_index on users(name,email);
+
+create index usr_btree_index using btree on users(name, email);
+
+create index usr_hash_index using hash on users(name,email);
+
+create unique index unq_usr_index on users(email);
+
+create fulltext index ftxt_usr_index on users(name);
+
+show index from users;
+
+drop index usr_index on users;
+

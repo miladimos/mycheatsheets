@@ -213,14 +213,109 @@ truncate table table_name; // delete table and create new empty table
 
 
 
+// Stored Procedure
+
+delimiter //
+
+create procedure GetAllUsers()
+begin 
+select * from users;
+end
+//
+
+delimiter ;
+
+call GetAllUsers()
+
+
+**********
+
+delimiter //
+
+create procedure GetUser(in userId int)
+begin 
+select * from users where id=userId;
+end
+//
+
+delimiter ;
+
+*****
+
+delimiter //
+
+create procedurer userCount(out total int)
+begin 
+select count(id) into total from users;
+end 
+//
+
+userCount(@total)
+select @total;
+
+
+drop procedure if exists GetUser;
+
+
+
+/// Triggers:
+
+delimiter //
+create trigger befor_users_update
+before update on users
+for each row 
+begin
+insert into users_actions set action = 'update', user_id = old.user_id
+end //
+
+show triggers;
+
+
+
+/// Views:
+
+create view user_view as select name,email from users;
+
+select * from user_view;
+
+
+create or replace view user_view(userName, userEmail) as select name, email from users;
+
+
+
+/// Transactions:
+
+set autocommit=0;
+
+start transaction;
+
+insert into users(name) values("name");
+insert into users(name) values("name2");
+
+commit;
 
 
 
 
+/// Users:
+
+// privilages: create, drop, update, delete, insert, select, grant all
+
+create user 'username'@'localhost' identified by 'password';
+
+grant all privilages on *.* to 'username'@'localhost';
+
+flush privilages;
 
 
+grant create on database.table to 'username'@'localhost';
 
+revoke create on database.table from 'username'@'localhost';
 
+show grants for 'username'@'localhost';
 
+show grants for current_user();
+
+drop user 'username';
 
 

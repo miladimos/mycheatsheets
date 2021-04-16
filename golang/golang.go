@@ -1,8 +1,10 @@
-// varables
+package main
 
-var i int
+import (
+	"fmt"
+)
 
-
-
-
- 
+func main() {
+	fmt.Print("Hello")
+	fmt.Println(" World!")
+}

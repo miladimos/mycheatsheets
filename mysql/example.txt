@@ -1,0 +1,32 @@
+create table courses(
+    id int unsigned auto_increment primary key,
+    name varchar(30) not null,
+    description varchar(250) not null,
+    price int(10) not null,
+    teacher_id int unsigned not null
+);
+
+create table teachers(
+    id int unsigned primary key auto_increment,
+    phone varchar(12) not null unique,
+    name varchar(30) not null,
+    password varchar(30) not null,
+);
+
+alter table courses add constraint fk_courseTeacher foreign key(teacher_id) references teachers(id);
+
+
+// joins
+
+select * from users cross join teachers;
+select * from users, teachers;
+
+
+select * from courses inner join teacher on course.teacher_id = teacher.id;
+select * from courses inner join teacher where course.teacher_id = teacher.id;
+
+
+select tbl1.id, tbl2.id from tbl1 cross join tbl2;
+
+
+select tbl1.id, tbl2.id from tbl1 left join tbl2 on tbl1.name = tbl2.name;
