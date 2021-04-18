@@ -2,6 +2,9 @@
 
 // error_reporting(E_ALL & ~E_NOTICE);
 
+
+// setcookie($name, $value, $expire, $path, $domain, $secure, $httponly);
+
 // setcookie('NAME', 'milad', time() + 60);
 // setcookie('NAME', 0, time() -1);
 // unset($_COOKIE['NAME']);
