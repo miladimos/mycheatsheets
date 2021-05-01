@@ -1,5 +1,7 @@
 <?php
 
+// header($string, $replace, $http_response_code);
+
 header('X-My-Header: Value');
 header('X-My-Header: Value 2', false);
 
