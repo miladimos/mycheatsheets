@@ -101,3 +101,41 @@ imagejpeg($image);
 //     }
 //     return $image;
 // }
+
+
+///// Watermark
+
+function insert_watermark()
+{
+    $image = imagecreatefrompng($path);
+    $textColor = imagecolorallocate($image, 255,255,255);
+    imagettftext($image, 14, 0, imagesx($image) -125, imagesy($image)-20, $textColor, 'font.ttf', 'This is Text');
+    header("Content-Type: image/png");
+    imagepng($image);
+    imagedestroy($image);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
