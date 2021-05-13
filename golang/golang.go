@@ -5,6 +5,16 @@ import (
 	"time"
 )
 
+type Post struct {
+	Title, Body string
+	Active      bool
+	Author
+}
+
+type Author struct {
+	Email, Name string
+}
+
 func main() {
 	// fmt.Print("Hello")
 	// fmt.Println(" World!")
@@ -63,25 +73,44 @@ func main() {
 	// 	}
 	// }
 
-	i := 1
-	for i <= 3 {
-		fmt.Println(i)
-		i = i + 1
-	}
+	// i := 1
+	// for i <= 3 {
+	// 	fmt.Println(i)
+	// 	i = i + 1
+	// }
 
-	for j := 7; j <= 9; j++ {
-		fmt.Println(j)
-	}
+	// for j := 7; j <= 9; j++ {
+	// 	fmt.Println(j)
+	// }
 
-	for {
-		fmt.Println("loop")
-		break
-	}
+	// for {
+	// 	fmt.Println("loop")
+	// 	break
+	// }
 
-	for n := 0; n <= 5; n++ {
-		if n%2 == 0 {
-			continue
-		}
-		fmt.Println(n)
-	}
+	// for n := 0; n <= 5; n++ {
+	// 	if n%2 == 0 {
+	// 		continue
+	// 	}
+	// 	fmt.Println(n)
+	// }
+
+	///// Struct
+
+	// p := Post{}
+	// p := new(Post)
+	// p := Post{"Title New", "This is Good", true}
+	p := Post{Title: "Title New", Body: "This is Good", Active: true, Author: Author{"email", "name"}}
+	// p.Title = "Test"
+
+	fmt.Println(p.Author.Email)
+
+}
+
+func hello(name string) {
+	fmt.Println("Hello " + name)
+}
+
+func hello2(name string, family string) string {
+	return fmt.Sprintf("Hello Dear, %s %s", name, family)
 }
