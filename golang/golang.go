@@ -15,6 +15,9 @@ type Author struct {
 	Email, Name string
 }
 
+// const APP string = "App" // Exported
+// const app string = "App" // Un exported
+
 func main() {
 	// fmt.Print("Hello")
 	// fmt.Println(" World!")
@@ -100,11 +103,30 @@ func main() {
 	// p := Post{}
 	// p := new(Post)
 	// p := Post{"Title New", "This is Good", true}
-	p := Post{Title: "Title New", Body: "This is Good", Active: true, Author: Author{"email", "name"}}
+	// p := Post{Title: "Title New", Body: "This is Good", Active: true, Author: Author{"email", "name"}}
 	// p.Title = "Test"
+	// fmt.Println(p.Author.Email)
 
-	fmt.Println(p.Author.Email)
+	// p.new()
 
+	/////// Pointers
+
+	// var x = 10
+	// var y *int = &x // x address
+	// fmt.Println(y)  // 0xc000086000
+	// fmt.Println(*y) // 10
+
+	// v := 10
+	// changeValue(&v)
+	// fmt.Println(v)
+}
+
+func (p Post) new() {
+	fmt.Println("new")
+}
+
+func changeValue(value *int) {
+	*value = 1000
 }
 
 func hello(name string) {
@@ -113,4 +135,8 @@ func hello(name string) {
 
 func hello2(name string, family string) string {
 	return fmt.Sprintf("Hello Dear, %s %s", name, family)
+}
+
+func add(x, y int) int {
+	return x + y
 }
