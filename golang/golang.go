@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"time"
 )
 
 type Post struct {
@@ -25,7 +24,17 @@ func main() {
 	// fmt.Printf("%d %s %f", 14, "String", 3.14)
 	// fmt.Printf("10 type -> %T", 10) // int
 
-	time.Sleep(1 * time.Second)
+	// time.Sleep(1 * time.Second)
+
+	// fmt.Print("Enter your name: ")
+	// var name string
+	// i, err := fmt.Scanln(&name)
+	// if err != nil {
+	// 	fmt.Println(err)
+	// 	return
+	// }
+	// fmt.Println("Your name: ", name)
+	// fmt.Println(i)
 
 	// string, float32, bool, int32
 	// var a, a1 string
@@ -119,6 +128,9 @@ func main() {
 	// v := 10
 	// changeValue(&v)
 	// fmt.Println(v)
+
+	// testPanic()
+
 }
 
 func (p Post) new() {
@@ -139,4 +151,14 @@ func hello2(name string, family string) string {
 
 func add(x, y int) int {
 	return x + y
+}
+
+func testPanic() {
+	defer func() {
+		if err := recover(); err != nil {
+			fmt.Println("Error")
+		}
+	}()
+
+	panic("Custom Panic")
 }
