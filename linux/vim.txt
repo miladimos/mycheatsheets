@@ -1,0 +1,26 @@
+in normal mode / command mode:
+
+i = go to insert mode
+wq = write and quite
+
+w = got to start of next word
+b = got to start of last word
+
+j = down, k = up, l=right, h=left
+
+ctrl+f => page down, ctrl+b = page up
+
+linenumber+gg = go to linenumber ex: 2gg
+
+gg = goto up of file
+shift+g = goto end of file
+$ = goto end of line, ^ = goto start of line
+
+
+in line mode:
+
+:linenumber = goto linenumber
+
+:$ = goto end of file
+
+:set ruler = show position of cursor
