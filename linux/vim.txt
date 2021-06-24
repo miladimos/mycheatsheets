@@ -4,7 +4,14 @@ i = go to insert mode
 wq = write and quite
 
 w = got to start of next word
+e = got to end of next word
 b = got to start of last word
+
+r = replace one char
+
+o = open new line below and go to insert mode, O = open new line above
+
+
 
 j = down, k = up, l=right, h=left
 
@@ -12,15 +19,36 @@ ctrl+f => page down, ctrl+b = page up
 
 linenumber+gg = go to linenumber ex: 2gg
 
-gg = goto up of file
+gg = goto up of file 
 shift+g = goto end of file
 $ = goto end of line, ^ = goto start of line
+
+5H go to 5th line from top of screen
+5L go to 5th line to the end of screen
+
+x = delete current char 
+
+d = delete ex: dw delete word, d& delete to end of line
+dd = delete current line
+
+p = paste last deleted text after cursor
+P = paste last deleted text before cursor
+
+xp = swap the chars
+
 
 
 in line mode:
 
 :linenumber = goto linenumber
 
+:/ search forward, :? search backward
+
 :$ = goto end of file
+
+:w new_file_name
+
+:e = reload file
+
 
 :set ruler = show position of cursor
