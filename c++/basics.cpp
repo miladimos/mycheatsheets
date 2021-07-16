@@ -228,6 +228,7 @@ int main()
     // cout<<s.replace(1,3, "gg"); // Hggo
     // s1.assign(s);
     // s1.append(s);
+    // s1.clear();
     // cout<<s1;
     // cout<<s.substr(2, 2); // ll
     // s.erase(3,2);
@@ -325,6 +326,16 @@ int main()
     // s.c=100;
     // s.u.e=65;
     // cout<<s.u.f; // A
+
+//    cout<<"File :%s\n"<< __FILE__ << endl;
+//    cout<<"Date :%s\n"<< __DATE__ << endl;
+//    cout<<"Time :%s\n"<< __TIME__ << endl;
+//    cout<<"Line :%d\n"<< __LINE__ << endl;
+//    cout<<"ANSI :%d\n"<< __STDC__ << endl; 
+
+    // int n;
+    // int* heapValue = new int[n]; // heap memory
+    // delete heapValue;
 
 
     // getchar();

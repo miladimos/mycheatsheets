@@ -98,4 +98,6 @@ git grep -e name -e family
 
 git grep --all-match -e name --and -e family
 
+
+sudo git push origin --delete edit_namespace
  
