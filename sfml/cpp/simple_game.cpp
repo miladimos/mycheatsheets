@@ -69,9 +69,45 @@ int main()
         }
 
         
+        if(enemySpawnTimer < 1000) 
+            enemySpawnTimer++;
 
+        if(enemySpawnTimer >= 1000) {
+            enemy.setPosition((rand() % int(window.getSize().x - enemy.getSize().x)), 0.f);
+            enemies.push_back(RectangleShape(enemy));
+            enemySpawnTimer = 0;
+        }
+
+        for(size_t i =0; i<enemies.size(); i++) {
+            enemies[i].move(0.f, 0.1f);
+
+            if(enemies[i].getPosition().y > window.getSize().y - 20)
+                enemies.erase(enemies.begin() + i);
+        }
+
+
+        for(size_t i = 0; i< balls.size(); i++) {
+            for(size_t k = 0; k < enemies.size(); k++) {
+                if(balls[i].getGlobalBounds().intersects(enemies[k].getGlobalBounds())) {
+                    balls.erase(balls.begin() + k);
+                    break;
+                }
+            }
+        }
 
         window.clear(Color::White);
+        window.draw(player);
+
+        for(size_t i = 0; i < enemies.size(); i++) {
+            window.draw(enemies[i]);
+        }
+
+        for(size_t i = 0; i < balls.size(); i++) {
+            window.draw(balls[i]);
+        }
+
+        
+
         window.display();
     }
 }

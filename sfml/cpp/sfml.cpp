@@ -38,10 +38,33 @@ int main() {
     Vertex line[] = { Vertex(Vector2f(20.f, 20.f)), Vertex(Vector2f(500.f, 600.f))};
     line->color = Color::Blue;
 
-    Music oggMusic;
-    oggMusic.openFromFile("sample_audio.ogg");
-    
+    // Music oggMusic;
+    // oggMusic.openFromFile("sample_audio.ogg");
     // oggMusic.setVolume(50.f);
+    
+    // SoundBuffer sbuffer;
+    // if (!buffer.loadFromFile())
+    //     throw "Not Opend";
+
+    // Sound sound;
+    // sound.setBuffer(buffer);
+
+
+    // Font font;
+    // // if (!font.loadFromFile("font.otf"))
+    // //     throw "Not Opend";
+    // Text text;
+    // text.setFont(font);
+    // text.setCharacterSize(30);
+    // text.setFillColor(Color::Blue);
+    // text.setStyle(Text::Bold);
+    // text.setString("Text");
+    // text.setPosition(10.f, 10.f);
+
+
+
+
+
     while(window.isOpen()) {
         Event event;
         while(window.pollEvent(event)) {
