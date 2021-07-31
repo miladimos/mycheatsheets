@@ -10,10 +10,11 @@
 // echo "Directory: ". __DIR__ . '<br />';
 // echo "Directory: ". dirname(__FILE__) . '<br />';
 // echo "Directory: ". dirname(__DIR__) . '<br />';
-// echo "Basename: ". basename(__FILE__) . '<br />';
-// echo "Basename: ". basename(__DIR__) . '<br />';
+// echo "Directory: ". dirname(dirname(__DIR__)) . '<br />';
+// echo "Basename File: ". basename(__FILE__) . '<br />';
+// echo "Basename DIR: ". basename(__DIR__) . '<br />';
 
-// $path_parts = pathinfo(__FILE__);
+// $path_parts = pathinfo(__FILE__); // PATHINFO_EXTENSION, PATHINFO_BASENAME, PATHINFO_DIRNAME, PATHINFO_FILENAME
 // echo '<pre>';
 // print_r($path_parts);
 // echo '</pre>';
