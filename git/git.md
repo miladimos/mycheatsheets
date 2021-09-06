@@ -83,6 +83,7 @@ git rev-list 321313..642342
 
 git rev-list 321313..642342 -m 2
 
+git branch -m [new_branch_name]
 
 git grep word
 

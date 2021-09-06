@@ -19,6 +19,9 @@ main() {
   // print(uri.host);
   // print(uri.path);
 
+  stdout.writeln("Enter name: ");
+  String? name = stdin.readLineSync();
+
   int a = 10;
   int b = 0;
 
