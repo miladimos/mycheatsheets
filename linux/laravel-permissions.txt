@@ -1,0 +1,8 @@
+sudo chown -R www-data:www-data /path/to/your/laravel-directory
+sudo usermod -a -G www-data ubuntu
+sudo chgrp -R www-data storage bootstrap/cache
+sudo chmod -R ug+rwx storage bootstrap/cache
+
+sudo chown -R www-data:www-data /path/to/your/laravel/root/directory
+
+chmod -R 775 /path/to/your/project
