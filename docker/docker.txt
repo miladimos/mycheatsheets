@@ -2,6 +2,7 @@ docker run hello-world
 docker run hello-world command
 docker run -r image
 docker run -d image sleep 100
+# -d => run in background
 docker run image:tag
 
 docker run --rm hello-world // remove automatic when stopped
@@ -14,21 +15,23 @@ docker run -p6379:6379 redis
 
 docker run 
 
-
+docker run -it --name mname -m 500m --memory-swap 1G -cpuset-cpus="0 alpine
 
 docker pull image-name // get the image from hub
 
 docker images
 
 docker ps // list docker run
-docker ps -a
-docker ps -l
-docker ps -q // just run id's
+docker ps -a // list all container run
+docker ps -l -n=2 // last containers
+docker ps -q // just show id's
 docker ps -q -a // just all id's
 docker ps -n 4
 docker ps -s
 docker ps -a --filter "name=test"
+docker ps -af status=exited
 
+docker stop $(docker ps -q)
 
 docker start CONTAINER_ID
 
@@ -38,11 +41,14 @@ docker attach CONTAINER_ID
 
 docker container log
 
+docker stats
+
 docker image 
 docker image push
 docker image ls
 docker image history
 docker image inspect
+docker inspect image
 
 docker system prune
 
@@ -80,6 +86,8 @@ docker unpause containerID
 
 docker save image > image.tar
 
+docker load -i image.tar
+
 docker rm `docker images -a -q`
 
 
@@ -92,3 +100,25 @@ docker system prune
 
 docker container run --mount source=my_volume، target=/container/path/for/volume my_image
                              type=bind, valoume, tmpfs
+
+
+
+useradd username 
+usermod -aG docker username
+
+
+
+
+ctrl + p + q -> detach
+
+
+enable live-restore
+
+/etc/docker/daemon.json
+{
+    "live-store":true
+}
+
+
+change storage driver:
+docker save -> push image -> change driver -> restart -> 

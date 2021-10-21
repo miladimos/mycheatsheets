@@ -11,7 +11,7 @@ read -p "Enter age: " age
 
 if [ "$age" == "20" ]; then
     echo "Valid"
-elif [ "$age" -eq "22" ]; then # -ge gt eq lt nq
+elif [ "$age" -eq "22" ]; then # -ge gt eq lt le ne
     echo "Grate"
 else 
     echo "Error"
@@ -64,6 +64,8 @@ else
     notify-send "Error"
 fi
 
+[[ "one" == "one" ]]
+echo $?
 
 echo "$1 + $2 = " $(($1 + $2))
 
@@ -72,9 +74,11 @@ $@ # all in seperate arg
 $*  # all in one args
 
 
-
-
-
+ss="Programming"
+echo ${#ss}
+echo ${ss:3}
+echo ${ss:3:6}
+echo ${ss: -3}
 
 func (){
     echo "Function"
@@ -105,3 +109,34 @@ while getopts "h:e:v" options ;do
     ;;
     esac
 done
+
+i=1
+while read f; do
+    echo "Line $i: $f"
+    ((i++))
+done < file.txt
+
+echo -e '\033[34;42mColor Text\033[0m'
+# tput 
+
+# touch {one,two,three}_{01..100}
+
+echo date +"%d-%m-%Y"
+
+printf "Name:\t%s\nID:\t%04d\n" "Ali" "20"
+
+# declare -i integer=120
+# readonly
+# declare -r e=300
+# declare -l lowerCase="lOweR"
+# declare -u lowerCase="lOweR"
+declare -A arr
+arr["name"]="Name"
+arr["id"]="200"
+for i in "${!arr[@]}" do
+    echo "$i : ${arr[$i]}"
+done
+# result=$(ping -c 1 google.com)
+
+# echo $MACHTYPE
+
