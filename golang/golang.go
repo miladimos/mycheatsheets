@@ -54,7 +54,7 @@ func main() {
 	// 	VERSION = "1"
 	// )
 
-	// language := "Js"
+	// language := "C"
 	// language2 := "Vuejs"
 	// if language == "PHP" {
 	// 	fmt.Println("PHP is cool")
@@ -73,8 +73,14 @@ func main() {
 	// 	fmt.Print("PHP")
 	// case "C":
 	// 	fmt.Print("C")
+	// 	fallthrough
 	// default:
 	// 	fmt.Print("D")
+	// }
+
+	// switch language:='JS'; langauge {
+	// case 'JS':
+	// 	fmt.Println('JS');
 	// }
 
 	// switch {
@@ -156,7 +162,8 @@ func add(x, y int) int {
 func testPanic() {
 	defer func() {
 		if err := recover(); err != nil {
-			fmt.Println("Error")
+			fmt.Println("Panic handled")
+			fmt.Println(err)
 		}
 	}()
 

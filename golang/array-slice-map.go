@@ -6,6 +6,7 @@ func main() {
 	// var a [5]int
 	// a[2] = 20
 	// fmt.Println(len(a))
+	// fmt.Println(cap(a))
 
 	// var b [3]string
 	// b = [3]string{"One", "Two", "three"}
