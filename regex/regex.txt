@@ -2,7 +2,6 @@
 * -> zero or more
 ? -> zero or one char
 . -> one char
-
 ^ -> start char
 $ -> end char
 
@@ -13,3 +12,17 @@ $ -> end char
 
 \w
 \W
+
+
+flags:
+
+i -> insensitive
+g -> global
+m -> multiple
+
+
+
+/pattern/flags
+
+attrib +h *.txt
+kiram to microsoft
