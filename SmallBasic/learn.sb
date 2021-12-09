@@ -1,0 +1,64 @@
+' TextWindow.ForegroundColor = "Red"
+' TextWindow.BackgroundColor = "White"
+' TextWindow.WriteLine("Hello World!")
+
+' TextWindow.Write("Enter your name: ")
+' Name = TextWindow.Read()
+' TextWindow.Write("Enter your age: ")
+' Age = TextWindow.ReadNumber()
+' TextWindow.WriteLine("Hello " + Name + " , " + Age + " years old" )
+
+
+' If Clock.Hour < 12 Then
+'TextWindow.WriteLine("Good Morning")
+'Else
+'  TextWindow.WriteLine("Good Evening")
+'EndIf
+  
+'i = 1
+'Start:
+'TextWindow.WriteLine(i)
+'i = i + 1
+'If i <= 1000 Then
+'  Goto Start
+'EndIf
+
+'For i = 1 To 20 Step 2
+'  TextWindow.WriteLine(i)
+'EndFor
+
+'  Arrays
+
+' person["name"] = "Joun"
+' person["age"] = 20
+' TextWindow.WriteLine("person array has " + Array.GetItemCount(person) + " items.")
+  
+' Sub PrintDateAndTime()
+'   TextWindow.WriteLine("Date: " + Clock.Date)
+'   TextWindow.WriteLine("Time: " + Clock.Time)
+' EndSub
+
+GraphicsWindow.Title = "First Window"
+GraphicsWindow.BackgroundColor = "Red"
+GraphicsWindow.Width = 600
+GraphicsWindow.Height = 600
+GraphicsWindow.CanResize = "False"
+GraphicsWindow.PenColor = GraphicsWindow.GetRandomColor()
+GraphicsWindow.PenWidth = 10
+GraphicsWindow.DrawLine(0, 100, 500, 200)
+GraphicsWindow.Show()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
