@@ -1,17 +1,26 @@
+. -> one char
 + -> one or more 
 * -> zero or more
 ? -> zero or one char
-. -> one char
 ^ -> start char
 $ -> end char
+
+[ab] -> collection : one of a or b
+[^ab] -> collection : one of else a or b
+
+\x{061F} -> ؟
 
 \s
 \S
 
 \d
+\D
 
 \w
 \W
+
+
+<.+?>.+?<\/.+?>
 
 
 flags:
