@@ -3,6 +3,9 @@ import 'dart:io';
 
 void main() async
 {
+  String name = stdin.readLineSync();
+  name.isEmpty ? stderr.writeln('Name Empty') : stdout.writeln("Hello ${name}");
+
   // var dir =  Directory('test').createSync();
   // var dir2 = await Directory('test').createTemp();
   
@@ -31,6 +34,23 @@ void main() async
   // sink.write('Last Accessed: ${file.lastAccessedSync()}');
   // sink.close();
 
-  
 
+}
+
+Future<void> createDescriptions(Iterable<String> objects) async {
+  for (final object in objects) {
+    try {
+      var file = File('$object.txt');
+      if (await file.exists()) {
+        var modified = await file.lastModified();
+        print(
+            'File for $object already exists. It was modified on $modified.');
+        continue;
+      }
+      await file.create();
+      await file.writeAsString('Start describing $object in this file.');
+    } on IOException catch (e) {
+      print('Cannot create description for $object: $e');
+    }
+  }
 }
