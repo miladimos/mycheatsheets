@@ -1,0 +1,27 @@
+/ets/httpd/conf/httpd.conf
+<VirtualHost *:80>
+    ServerName test.com
+    DocumentRoot /var/www/html/test
+    ErrorLog /var/log/httpd/test/error_log
+    TransferLog /var/log/httpd/test/access_log
+</VirtualHost>
+
+<VirtualHost *:80>
+    ServerName sub.test.com
+    DocumentRoot /var/www/html/sub
+</VirtualHost>
+
+in /etc/hosts:
+127.0.0.1 test.com
+127.0.0.1 sub.test.com
+
+in /etc/php.ini:
+cgi.fixpathinfo=0
+
+
+in /etc/php-fpm.d/www.conf
+listen = /var/run/php-fpm/php-fpm.sock
+
+listen.owner = nginx
+listen.group = nginx
+

@@ -65,6 +65,12 @@ git checkout commitId
 
 git checkout master
 
+git tag
+
+git tag -a v0.1.1 -m "v0.1.1"
+
+git tag v0.1.1 -f -m "new message"
+
 git push origin tagName
 
 git push origin --tags
