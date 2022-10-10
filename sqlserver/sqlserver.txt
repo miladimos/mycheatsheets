@@ -1,0 +1,10 @@
+sqlcmd -s localhost 
+
+SELECT @@VERSION
+
+sp_databases
+
+
+
+
+

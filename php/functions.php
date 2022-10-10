@@ -53,6 +53,9 @@ function updateCounter(){
 echo $counter; // 10
 
 
+unset($var,$var2,$var3);
+unset($var[1]);
+
 
 
 // php builtin functions for information of functions
