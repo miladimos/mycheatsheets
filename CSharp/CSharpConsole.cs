@@ -51,9 +51,11 @@ namespace CSharp
 
 
 
+            string fname = "Mani", lname = "Amani";
+            string fullname = string.Format("My name is {0} {1}", fname, lname);
 
 
-
+            Console.WriteLine((string.Format("{0:yyyy / M / dd}", DateTime.Now)));
 
 
 
