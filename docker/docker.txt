@@ -95,7 +95,7 @@ docker volume create —-name my_volume
 docker volume ls
 docker volume inspect my_volume
 docker volume rm my_volume
-docker volume prun
+docker volume prune
 docker system prune
 
 docker container run --mount source=my_volume، target=/container/path/for/volume my_image

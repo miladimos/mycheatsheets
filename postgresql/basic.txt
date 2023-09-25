@@ -1,0 +1,15 @@
+create database db_name;
+
+create table users (
+    id serial primary key,
+    name varchar(255) not null,
+)
+
+create table usage (
+    id serial primary key,
+    customer int not null,
+
+    foreign key (customer) reference users(id)
+)
+
+insert into users (name) values ('ali')
