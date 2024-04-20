@@ -113,6 +113,10 @@ func main() {
 	// 	fmt.Println(n)
 	// }
 
+	/// Map
+	m := make(map[string]string)
+	m["key"] = "value"
+
 	///// Struct
 
 	// p := Post{}
@@ -136,6 +140,13 @@ func main() {
 	// fmt.Println(v)
 
 	// testPanic()
+
+	/////// Enums
+	// type Format int
+	// const (
+	// 	MP3 Format = iota
+	// 	MP4
+	// )
 
 }
 
